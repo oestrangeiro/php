@@ -14,6 +14,20 @@
 			<input type="number" name="times-field" placeholder="Número"><br>
 			<button type="submmit">Enviar</button>
 		</form>
+
+		<?php
+			// Primeiramente o loop for
+			$numLimite = null;
+			$mensagem = null;
+
+			$numLimite = $_POST["times-field"];
+			$mensagem = $_POST["text-field"];
+
+			for($i = 0; $i < $numLimite; $i++){ 
+				echo $i+1 . ": ". "'" . $mensagem . "'" . "<br>";
+			}
+		?>
+		
 		<form action="index.php" method="post">
 			<h2>Decrementador</h2>
 			<label>Digite um número: </label><br>
@@ -32,16 +46,3 @@
 	</div>
 </body>
 </html>
-
-<?php
-	// Primeiramente o loop for
-	$numLimite = null;
-	$mensagem = null;
-
-	$numLimite = $_POST["times-field"];
-	$mensagem = $_POST["text-field"];
-
-	for($i = 0; $i < $numLimite; $i++){ 
-		echo $i+1 . ": ". "'" . $mensagem . "'" . "<br>";
-	}
-?>
